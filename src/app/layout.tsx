@@ -5,6 +5,8 @@ import '@/app/global.css'
 
 import classNames from "classnames";
 
+import { Analytics } from "@vercel/analytics/next"
+
 import { baseURL, meta } from "@/resources/seo";
 import { fonts, style, dataStyle } from "@/resources/once-ui.config";
 import { Meta, Schema,  Column, Flex, Mask, MatrixFx, ThemeInit} from "@once-ui-system/core";
@@ -82,6 +84,7 @@ export default function RootLayout({
               />
             </Mask> */}
           </Column>
+          <Analytics/>
           {children}
         </Column>
       </Providers>

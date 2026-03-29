@@ -14,6 +14,7 @@
 		"@once-ui-system/core": "^1.6.4",
 		"@phosphor-icons/react": "^2.1.10",
 		"@tailwindcss/postcss": "^4.2.2",
+		"@vercel/analytics": "^2.0.1",
 		"class-variance-authority": "^0.7.1",
 		"classnames": "^2.5.1",
 		"clsx": "^2.1.1",
@@ -36,8 +37,8 @@
 		"@types/node": "20.17.23",
 		"@types/react": "19.0.1",
 		"@types/react-dom": "19.0.2",
-		"typescript": "5.8.2",
-		"jsrepo": "^3.7.0"
+		"jsrepo": "^3.7.0",
+		"typescript": "5.8.2"
 	},
 	"overrides": {
 		"@types/react": "19.0.1",
