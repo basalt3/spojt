@@ -11,7 +11,7 @@
 
 <br>
 
-A **`🥀 high-contrast`**, **`💎 minimalist`** foundation for **`🏗️ building`** and distributing **`🌵 design systems`**. Engineered for technical **`🚄 speed` and **`✨ architectural clarity`**. Built with a **`🔮 clean, **`🧑‍💻 modern tech stack`** featuring the latest **`📚 libraries`** and **`🪟 frameworks`** for effortless, professional **`⌨️ development`**.
+A **`high-contrast`**, **`💎 minimalist`** foundation for **`building`** and distributing **`design systems`**. Engineered for technical **`speed`** and **`architectural clarity`**. Built with a **`clean`** modern tech stack featuring the latest **`libraries`** and **`frameworks`** for effortless, professional **`⌨️ development`**.
 
 <br><br>
 
