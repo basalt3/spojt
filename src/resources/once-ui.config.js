@@ -29,7 +29,7 @@ const code = Geist_Mono({
   variable: "--font-code",
   subsets: ["latin"],
   display: "swap",
-  weight: "300",
+  weight: "400",
 });
 
 const jacquard = Jacquard_12_Charted({
