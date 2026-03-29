@@ -1,17 +1,17 @@
 // IMPORTANT: Replace with your own domain address - it's used for SEO in meta tags and schema
-const baseURL = "https://demo.once-ui.com";
+const baseURL = "https://spojt.vercel.app";
 
 // metadata for pages
 const meta = {
   home: {
     path: "/",
-    title: "Once UI for Next.js",
+    title: "Spojt — The new Atomic UI Registry",
     description:
-      "An open-source design system and component library for Next.js that emphasizes easy styling and accessibility in UI development.",
+      "A high-contrast, minimalist foundation for building and distributing design systems. Engineered for technical speed and architectural clarity.",
     image: "/images/og/home.jpg",
-    canonical: "https://once-ui.com",
+    canonical: "https://spojt.vercel.app",
     robots: "index,follow",
-    alternates: [{ href: "https://once-ui.com", hrefLang: "en" }],
+    alternates: [{ href: "https://spojt.vercel.app", hrefLang: "en" }],
   },
   // add more routes and reference them in page.tsx
 };
@@ -19,10 +19,9 @@ const meta = {
 // default schema data
 const schema = {
   logo: "",
-  type: "Organization",
-  name: "Once UI",
+  type: "SAAS",
+  name: "Spojt",
   description: meta.home.description,
-  email: "lorant@once-ui.com",
 };
 
 export { meta, schema, baseURL };
