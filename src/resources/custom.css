@@ -54,6 +54,8 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
+    max-height: fit-content !important;
+ 
   }
 
   #heroTextLeft {
