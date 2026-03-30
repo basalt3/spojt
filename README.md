@@ -27,9 +27,9 @@ A **`high-contrast`**, **`minimalist`** foundation for **`building`** and distri
 
 **`5.`** **⚙️ Configurable** - Feature toggles and customization
 
-**`6.`** **TypeScript** - Full (some) type safety
+**`6.`** **🌀 TypeScript** - Full (some) type safety
 
-**`7.`** **Minimalist** - Clean design
+**`7.`** **🫧 Minimalist** - Clean design
 
 <br>
 
