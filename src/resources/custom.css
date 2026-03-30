@@ -39,6 +39,10 @@
   z-index: 5;
 }
 
+#heroMobileMatrix{
+  display:none;
+}
+
 #navIcon {
   display: none;
 }
@@ -57,7 +61,12 @@
     max-height: fit-content !important;
  
   }
-
+#heroMobileMatrix{
+  display:flex;
+}
+#heroMatrix{
+  display:none;
+}
   #heroTextLeft {
     text-align: center;
   }

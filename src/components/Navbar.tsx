@@ -1,3 +1,4 @@
+"use client";
 import {
   Row,
   Text,
@@ -5,18 +6,31 @@ import {
   SmartLink,
   ThemeSwitcher,
   Button,
+  DropdownWrapper,
+  Column,
   NavIcon,
+  Option,
 } from "@once-ui-system/core";
 import { navigationLinks } from "@/resources/data/navigation";
 import { links } from "@/resources/constants/links";
 import { fonts } from "@/resources/once-ui.config";
 import { spojtConfig } from "@/resources/spojt.config";
 
+import { useState } from "react";
+
 interface NavbarProps {
   className?: string;
 }
 
 export const Navbar: React.FC<NavbarProps> = ({ className }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [selected, setSelected] = useState("");
+
+  const handleSelect = (value: string) => {
+    setSelected(value);
+    setIsOpen(false);
+  };
+
   return (
     <Row
       fillWidth
@@ -44,15 +58,15 @@ export const Navbar: React.FC<NavbarProps> = ({ className }) => {
           </Text>
         </Row>
         {spojtConfig.utilities.navLinks && (
-        <Row center gap="m" id="navLinks">
-          {navigationLinks.map((link) => (
-            <SmartLink key={link.label} href={link.href}>
-              <Text variant="code-default-xs">
-                <b>{link.label}</b>
-              </Text>
-            </SmartLink>
-          ))}
-        </Row>
+          <Row center gap="m" id="navLinks">
+            {navigationLinks.map((link) => (
+              <SmartLink key={link.label} href={link.href}>
+                <Text variant="code-default-xs">
+                  <b>{link.label}</b>
+                </Text>
+              </SmartLink>
+            ))}
+          </Row>
         )}
       </Row>
       <Row center gap={"m"} id="navButtonsContainer">
@@ -93,7 +107,37 @@ export const Navbar: React.FC<NavbarProps> = ({ className }) => {
             </Row>
           </Text>
         </Button>
-        <NavIcon id="navIcon" />
+
+        <DropdownWrapper
+          isOpen={isOpen}
+          radius="m"
+          onOpenChange={setIsOpen}
+          background="transparent"
+          trigger={
+            <NavIcon
+              id="navIcon"
+              isActive={isOpen}
+              onClick={() => setIsOpen(!isOpen)}
+            />
+          }
+          dropdown={
+            <Column
+              minWidth={10}
+              padding="4"
+              gap="2"
+              background="neutral-medium"
+            
+            >
+              {navigationLinks.map((link) => (
+                <Option
+                  label={link.label}
+                  onClick={() => handleSelect(link.label)}
+                  value={link.label}
+                />
+              ))}
+            </Column>
+          }
+        />
       </Row>
     </Row>
   );

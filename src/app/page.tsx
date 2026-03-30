@@ -9,7 +9,9 @@ import { Libraries } from "@/components/Libraries";
 import { Footer } from "@/components/Footer";
 
 export default function Home() {
-  return (
+  return (<>
+
+  
     <Column
       fillWidth
       style={{ minHeight: "100svh" }}
@@ -42,5 +44,5 @@ export default function Home() {
         </Column>
       </Column>
     </Column>
-  );
+  </>);
 }

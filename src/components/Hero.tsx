@@ -18,20 +18,34 @@ export const Hero: React.FC<HeroProps> = ({ className }) => {
       fillHeight
       id="heroRow"
       className={className}
-    >
-      <Flex fillWidth flex={1} center>
-        {spojtConfig.utilities.matrixFx && (
-          <Mask maxWidth="m" x={50} y={50} radius={41} position="absolute">
+      
+    >    
+           {spojtConfig.utilities.matrixFx && (
+<>
+      <Mask maxWidth="m" x={50} y={50} radius={41} position="absolute" id="heroMobileMatrix">
+        <MatrixFx
+          size={1.5}
+          spacing={6}
+          fps={90}
+          colors={["brand-solid-medium"]}
+          flicker
+          opacity={80}
+        />
+      </Mask>
+
+          <Mask maxWidth="m" x={25} y={50} radius={34} position="absolute" id="heroMatrix">
             <MatrixFx
-              size={1.5}
+              size={1.9}
               spacing={6}
               fps={90}
-              colors={["brand-solid-medium"]}
+              colors={["brand-solid-strong"]}
               flicker
               opacity={80}
             />
-          </Mask>
+          </Mask></>
         )}
+      <Flex fillWidth flex={1} center>
+       
         <Text
           variant="display-default-l"
           onBackground="neutral-strong"
