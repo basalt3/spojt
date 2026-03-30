@@ -75,7 +75,7 @@ export const Hero: React.FC<HeroProps> = ({ className }) => {
         >
           A high-contrast, minimalist foundation for building and distributing{" "}
           {spojtConfig.utilities.highlighter ? (
-            <Highlighter action="underline" color="#FF9800">
+            <Highlighter action="underline" color="var(--brand-solid-strong)">
               design systems
             </Highlighter>
           ) : (
