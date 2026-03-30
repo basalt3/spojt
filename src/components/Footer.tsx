@@ -41,51 +41,40 @@ export const Footer: React.FC<FooterProps> = ({ ...flex }) => {
           </Text>
           <Text onBackground="neutral-weak">/ All rights reserved</Text>
         </Text>
-        <Row gap="8" vertical="center">
-          {socialLinks.map((link) => (
-            <IconButton
-              key={link.platform}
-              size="s"
-              variant="ghost"
-              href={link.href}
-              icon={link.icon}
-            >
-              {link.icon === "github" && <GithubLogoIcon />}
-              {link.icon === "linkedin" && <LinkedinLogoIcon />}
-              {link.icon === "threads" && <ThreadsLogoIcon />}
-            </IconButton>
-          ))}
+        <Row gap="8" vertical="center" id="socialLinks">
+          <Row gap="8">
+            {" "}
+            {socialLinks.map((link) => (
+              <IconButton
+                key={link.platform}
+                size="s"
+                variant="ghost"
+                href={link.href}
+                icon={link.icon}
+              >
+                {link.icon === "github" && <GithubLogoIcon />}
+                {link.icon === "linkedin" && <LinkedinLogoIcon />}
+                {link.icon === "threads" && <ThreadsLogoIcon />}
+              </IconButton>
+            ))}
+          </Row>
 
           {spojtConfig.utilities.visitorCounter && (
-            <>
+            <div id="visitorCounter">
               {" "}
               <Media
                 src="https://vbr.nathanchung.dev/badge?page_id=spojt&&lcolor=151515&color=151515&style=for-the-badge&text=non unique visitors"
                 unoptimized
-                style={{
-                  scale: 0.8,
-                  marginLeft: "-15px",
-                  marginRight: "-20px",
-                  pointerEvents: "none",
-                  willChange: "unset",
-                  userSelect: "none",
-                }}
+                id="counter"
                 dark
               />
               <Media
                 src="https://vbr.nathanchung.dev/badge?page_id=spojt&&lcolor=EDEDED&color=EDEDED&style=for-the-badge&text=non unique visitors"
                 unoptimized
-                style={{
-                  scale: 0.8,
-                  marginLeft: "-15px",
-                  marginRight: "-20px",
-                  pointerEvents: "none",
-                  willChange: "unset",
-                  userSelect: "none",
-                }}
+                id="counter"
                 light
               />
-            </>
+            </div>
           )}
         </Row>
       </Row>
