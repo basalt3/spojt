@@ -1,15 +1,36 @@
-import { Row, Text, Flex, Mask, MatrixFx, Button } from "@once-ui-system/core";
+"use client";
+import { useState } from "react";
+import {
+  Row,
+  Text,
+  Flex,
+  Mask,
+  MatrixFx,
+  Button,
+  StylePanel,
+  IconButton,
+  DropdownWrapper,
+  StyleOverlay,
+} from "@once-ui-system/core";
 import { Highlighter } from "@/components/ui/highlighter";
 import { ArrowUpRightIcon } from "@phosphor-icons/react/dist/ssr";
 import { links } from "@/resources/constants/links";
 import { fonts } from "@/resources/once-ui.config";
 import { spojtConfig } from "@/resources/spojt.config";
+import { PaletteIcon } from "@phosphor-icons/react";
 
 interface HeroProps {
   className?: string;
 }
 
 export const Hero: React.FC<HeroProps> = ({ className }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [selected, setSelected] = useState("");
+
+  const handleSelect = (value: string) => {
+    setSelected(value);
+    setIsOpen(false);
+  };
   return (
     <Row
       fillWidth
@@ -18,22 +39,35 @@ export const Hero: React.FC<HeroProps> = ({ className }) => {
       fillHeight
       id="heroRow"
       className={className}
-      
-    >    
-           {spojtConfig.utilities.matrixFx && (
-<>
-      <Mask maxWidth="m" x={50} y={50} radius={41} position="absolute" id="heroMobileMatrix">
-        <MatrixFx
-          size={1.5}
-          spacing={6}
-          fps={90}
-          colors={["brand-solid-medium"]}
-          flicker
-          opacity={80}
-        />
-      </Mask>
+    >
+      {spojtConfig.utilities.matrixFx && (
+        <>
+          <Mask
+            maxWidth="m"
+            x={50}
+            y={50}
+            radius={41}
+            position="absolute"
+            id="heroMobileMatrix"
+          >
+            <MatrixFx
+              size={1.5}
+              spacing={6}
+              fps={90}
+              colors={["brand-solid-medium"]}
+              flicker
+              opacity={80}
+            />
+          </Mask>
 
-          <Mask maxWidth="m" x={25} y={50} radius={34} position="absolute" id="heroMatrix">
+          <Mask
+            maxWidth="m"
+            x={25}
+            y={50}
+            radius={34}
+            position="absolute"
+            id="heroMatrix"
+          >
             <MatrixFx
               size={1.9}
               spacing={6}
@@ -42,10 +76,10 @@ export const Hero: React.FC<HeroProps> = ({ className }) => {
               flicker
               opacity={80}
             />
-          </Mask></>
-        )}
+          </Mask>
+        </>
+      )}
       <Flex fillWidth flex={1} center>
-       
         <Text
           variant="display-default-l"
           onBackground="neutral-strong"
@@ -104,6 +138,29 @@ export const Hero: React.FC<HeroProps> = ({ className }) => {
               </Row>
             </Text>
           </Button>
+
+          <StyleOverlay
+            radius="m"
+            background="neutral-medium"
+            fillHeight
+            maxWidth={25}
+            data-scaling="90"
+            fillWidth
+            style={{
+              position: "fixed",
+              top: 0,
+              bottom: 0,
+              right: 0,
+              marginInlineEnd: 0,
+              width: "100svw",
+              height: "100svh",
+            }}
+          >
+            <IconButton variant="secondary">
+              {" "}
+              <PaletteIcon />
+            </IconButton>
+          </StyleOverlay>
         </Row>
       </Flex>
     </Row>
