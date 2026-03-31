@@ -52,6 +52,35 @@ A **`high-contrast`**, **`minimalist`** foundation for **`building`** and distri
 
 ### 📩 Installation
 
+**`Option 1.`** Fresh Start (Recommended for custom projects)
+
+> **Windows:**
+```bash
+git clone https://github.com/basalt3/spojt.git
+cd spojt
+
+# Clean up template files and start fresh
+setup\clean.bat
+
+bun install
+bun run dev
+```
+
+> **Linux/macOS:**
+```bash
+git clone https://github.com/basalt3/spojt.git
+cd spojt
+
+# Clean up template files and start fresh
+chmod +x setup/clean.sh
+./setup/clean.sh
+
+bun install
+bun run dev
+```
+
+**`Option 2.`** Use Template As-Is
+
 ```bash
 git clone https://github.com/basalt3/spojt.git
 cd spojt
@@ -60,9 +89,10 @@ bun install
 bun run dev
 ```
 
+
 ### ⚙️ Configuration
 
-The application **`🪼 behavior`** can be controlled through `src/resources/spojt.config.js`:
+The application **`behavior`** can be controlled through `src/resources/spojt.config.js` (if using the template as-is):
 
 ```javascript
 // boolean values for visibility
