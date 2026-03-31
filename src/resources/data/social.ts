@@ -12,7 +12,7 @@ export const socialLinks: SocialLink[] = [
   },
   {
     platform: "LinkedIn",
-    href: "https://www.linkedin.com/company/basalt3/",
+    href: "#",
     icon: "linkedin",
   },
   {
