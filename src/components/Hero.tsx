@@ -142,6 +142,7 @@ export const Hero: React.FC<HeroProps> = ({ className }) => {
           <StyleOverlay
             radius="m"
             background="neutral-medium"
+            onBackground="neutral-strong"
             fillHeight
             maxWidth={25}
             data-scaling="90"
@@ -156,7 +157,7 @@ export const Hero: React.FC<HeroProps> = ({ className }) => {
               height: "100svh",
             }}
           >
-            <IconButton variant="secondary">
+            <IconButton variant="secondary" size="l">
               {" "}
               <PaletteIcon />
             </IconButton>
